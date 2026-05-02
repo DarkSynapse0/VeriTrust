@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.turbo/
+.vercel/
+coverage/
+*.tsbuildinfo
+
+# Hardhat
+artifacts/
+cache/
+typechain-types/
+
+# Environment — only commit .env.example
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+!.env.example
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Misc
+.eslintcache
+.parcel-cache/
+.cache/
+*.pem
+
+# Generated
+prisma/migrations/dev.db*
+infrastructure/prisma/migrations/dev.db*

@@ -1,0 +1,12 @@
+node_modules
+.next
+.turbo
+out
+dist
+coverage
+.env
+.env.local
+.env.*.local
+next-env.d.ts
+.vercel
+*.tsbuildinfo

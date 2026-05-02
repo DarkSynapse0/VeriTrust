@@ -1,0 +1,26 @@
+{
+  "name": "@veritrust/canonical-schemas",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Versioned JSON schemas for credential types (degree, certificate, id).",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./schemas/*": "./schemas/*"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "echo 'canonical-schemas: no-op lint' && exit 0",
+    "typecheck": "tsc --noEmit",
+    "test": "echo 'canonical-schemas: no-op test' && exit 0",
+    "clean": "rm -rf dist .turbo *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@veritrust/shared-types": "workspace:*"
+  }
+}

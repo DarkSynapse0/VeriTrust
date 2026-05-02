@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  VeriTrust design tokens. Light theme is default; dark theme via [data-theme="dark"]
+  on <html>. Status colors are calm-end of the family — never neon/cartoon.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
+
+    /* status — verified (calm green) */
+    --verified: 152 60% 36%;
+    --verified-fg: 152 70% 22%;
+    --verified-bg: 152 50% 96%;
+    --verified-border: 152 40% 80%;
+
+    /* status — tampered (serious red, not alarm-cartoon) */
+    --tampered: 0 70% 45%;
+    --tampered-fg: 0 75% 30%;
+    --tampered-bg: 0 60% 97%;
+    --tampered-border: 0 50% 85%;
+
+    /* status — revoked (caution amber) */
+    --revoked: 31 88% 45%;
+    --revoked-fg: 24 80% 30%;
+    --revoked-bg: 36 90% 96%;
+    --revoked-border: 36 60% 82%;
+
+    /* status — not-registered (informational neutral) */
+    --notreg: 215 16% 47%;
+    --notreg-fg: 215 25% 27%;
+    --notreg-bg: 210 40% 96%;
+    --notreg-border: 214 32% 88%;
+
+    --radius: 0.625rem;
+  }
+
+  [data-theme='dark'] {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --muted: 217 33% 14%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 14%;
+    --accent-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 217 33% 14%;
+    --secondary-foreground: 210 40% 98%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 210 40% 98%;
+
+    --verified: 152 50% 50%;
+    --verified-fg: 152 60% 80%;
+    --verified-bg: 152 40% 12%;
+    --verified-border: 152 30% 22%;
+
+    --tampered: 0 70% 60%;
+    --tampered-fg: 0 80% 80%;
+    --tampered-bg: 0 50% 14%;
+    --tampered-border: 0 40% 28%;
+
+    --revoked: 31 88% 60%;
+    --revoked-fg: 36 90% 80%;
+    --revoked-bg: 31 60% 14%;
+    --revoked-border: 31 40% 28%;
+
+    --notreg: 215 20% 65%;
+    --notreg-fg: 210 40% 90%;
+    --notreg-bg: 217 33% 14%;
+    --notreg-border: 217 33% 22%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

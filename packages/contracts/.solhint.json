@@ -1,0 +1,17 @@
+{
+  "rules": {
+    "compiler-version": ["error", "0.8.24"],
+    "func-visibility": ["error", { "ignoreConstructors": true }],
+    "state-visibility": "error",
+    "no-empty-blocks": "off",
+    "max-line-length": ["warn", 120],
+    "var-name-mixedcase": "warn",
+    "const-name-snakecase": "warn",
+    "func-name-mixedcase": "warn",
+    "no-inline-assembly": "warn",
+    "avoid-low-level-calls": "warn",
+    "not-rely-on-time": "off",
+    "explicit-types": ["error", "explicit"],
+    "no-unused-vars": "error"
+  }
+}
